@@ -101,54 +101,171 @@
         <div class="my-auto">
           <h2 class="mb-5">電子相簿</h2>
 
-          <div class="resume-item d-flex flex-column flex-md-row mb-5">
-            <div class="resume-content mr-auto">
-              <h3 class="mb-0">Senior Web Developer</h3>
-              <div class="subheading mb-3">Intelitec Solutions</div>
-              <p>Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud solution. User generated content in real-time will have multiple touchpoints for offshoring.</p>
-            </div>
-            <div class="resume-date text-md-right">
-              <span class="text-primary">March 2013 - Present</span>
-            </div>
-          </div>
+                <link href="https://cdn.rawgit.com/sachinchoolur/lightgallery.js/master/dist/css/lightgallery.css" rel="stylesheet">
 
-          <div class="resume-item d-flex flex-column flex-md-row mb-5">
-            <div class="resume-content mr-auto">
-              <h3 class="mb-0">Web Developer</h3>
-              <div class="subheading mb-3">Intelitec Solutions</div>
-              <p>Capitalize on low hanging fruit to identify a ballpark value added activity to beta test. Override the digital divide with additional clickthroughs from DevOps. Nanotechnology immersion along the information highway will close the loop on focusing solely on the bottom line.</p>
-            </div>
-            <div class="resume-date text-md-right">
-              <span class="text-primary">December 2011 - March 2013</span>
-            </div>
-          </div>
+                <style>
+                    #experience{
+                        background-color: #152836
+                    }
+                    .demo-gallery > ul {
+                        margin-bottom: 0;
+                    }
+                    .demo-gallery > ul > li {
+                        float: left;
+                        margin-bottom: 15px;
+                        margin-right: 20px;
+                        width: 200px;
+                    }
+                    .demo-gallery > ul > li a {
+                        border: 3px solid #FFF;
+                        border-radius: 3px;
+                        display: block;
+                        overflow: hidden;
+                        position: relative;
+                        float: left;
+                    }
+                    .demo-gallery > ul > li a > img {
+                        -webkit-transition: -webkit-transform 0.15s ease 0s;
+                        -moz-transition: -moz-transform 0.15s ease 0s;
+                        -o-transition: -o-transform 0.15s ease 0s;
+                        transition: transform 0.15s ease 0s;
+                        -webkit-transform: scale3d(1, 1, 1);
+                        transform: scale3d(1, 1, 1);
+                        height: 100%;
+                        width: 100%;
+                    }
+                    .demo-gallery > ul > li a:hover > img {
+                        -webkit-transform: scale3d(1.1, 1.1, 1.1);
+                        transform: scale3d(1.1, 1.1, 1.1);
+                    }
+                    .demo-gallery > ul > li a:hover .demo-gallery-poster > img {
+                        opacity: 1;
+                    }
+                    .demo-gallery > ul > li a .demo-gallery-poster {
+                        background-color: rgba(0, 0, 0, 0.1);
+                        bottom: 0;
+                        left: 0;
+                        position: absolute;
+                        right: 0;
+                        top: 0;
+                        -webkit-transition: background-color 0.15s ease 0s;
+                        -o-transition: background-color 0.15s ease 0s;
+                        transition: background-color 0.15s ease 0s;
+                    }
+                    .demo-gallery > ul > li a .demo-gallery-poster > img {
+                        left: 50%;
+                        margin-left: -10px;
+                        margin-top: -10px;
+                        opacity: 0;
+                        position: absolute;
+                        top: 50%;
+                        -webkit-transition: opacity 0.3s ease 0s;
+                        -o-transition: opacity 0.3s ease 0s;
+                        transition: opacity 0.3s ease 0s;
+                    }
+                    .demo-gallery > ul > li a:hover .demo-gallery-poster {
+                        background-color: rgba(0, 0, 0, 0.5);
+                    }
+                    .demo-gallery .justified-gallery > a > img {
+                        -webkit-transition: -webkit-transform 0.15s ease 0s;
+                        -moz-transition: -moz-transform 0.15s ease 0s;
+                        -o-transition: -o-transform 0.15s ease 0s;
+                        transition: transform 0.15s ease 0s;
+                        -webkit-transform: scale3d(1, 1, 1);
+                        transform: scale3d(1, 1, 1);
+                        height: 100%;
+                        width: 100%;
+                    }
+                    .demo-gallery .justified-gallery > a:hover > img {
+                        -webkit-transform: scale3d(1.1, 1.1, 1.1);
+                        transform: scale3d(1.1, 1.1, 1.1);
+                    }
+                    .demo-gallery .justified-gallery > a:hover .demo-gallery-poster > img {
+                        opacity: 1;
+                    }
+                    .demo-gallery .justified-gallery > a .demo-gallery-poster {
+                        background-color: rgba(0, 0, 0, 0.1);
+                        bottom: 0;
+                        left: 0;
+                        position: absolute;
+                        right: 0;
+                        top: 0;
+                        -webkit-transition: background-color 0.15s ease 0s;
+                        -o-transition: background-color 0.15s ease 0s;
+                        transition: background-color 0.15s ease 0s;
+                    }
+                    .demo-gallery .justified-gallery > a .demo-gallery-poster > img {
+                        left: 50%;
+                        margin-left: -10px;
+                        margin-top: -10px;
+                        opacity: 0;
+                        position: absolute;
+                        top: 50%;
+                        -webkit-transition: opacity 0.3s ease 0s;
+                        -o-transition: opacity 0.3s ease 0s;
+                        transition: opacity 0.3s ease 0s;
+                    }
+                    .demo-gallery .justified-gallery > a:hover .demo-gallery-poster {
+                        background-color: rgba(0, 0, 0, 0.5);
+                    }
+                    .demo-gallery .video .demo-gallery-poster img {
+                        height: 48px;
+                        margin-left: -24px;
+                        margin-top: -24px;
+                        opacity: 0.8;
+                        width: 48px;
+                    }
+                    .demo-gallery.dark > ul > li a {
+                        border: 3px solid #04070a;
+                    }
+                    .home .demo-gallery {
+                        padding-bottom: 80px;
+                    }
+                </style>
 
-          <div class="resume-item d-flex flex-column flex-md-row mb-5">
-            <div class="resume-content mr-auto">
-              <h3 class="mb-0">Junior Web Designer</h3>
-              <div class="subheading mb-3">Shout! Media Productions</div>
-              <p>Podcasting operational change management inside of workflows to establish a framework. Taking seamless key performance indicators offline to maximise the long tail. Keeping your eye on the ball while performing a deep dive on the start-up mentality to derive convergence on cross-platform integration.</p>
-            </div>
-            <div class="resume-date text-md-right">
-              <span class="text-primary">July 2010 - December 2011</span>
-            </div>
-          </div>
-
-          <div class="resume-item d-flex flex-column flex-md-row">
-            <div class="resume-content mr-auto">
-              <h3 class="mb-0">Web Design Intern</h3>
-              <div class="subheading mb-3">Shout! Media Productions</div>
-              <p>Collaboratively administrate empowered markets via plug-and-play networks. Dynamically procrastinate B2C users after installed base benefits. Dramatically visualize customer directed convergence without revolutionary ROI.</p>
-            </div>
-            <div class="resume-date text-md-right">
-              <span class="text-primary">September 2008 - June 2010</span>
-            </div>
-          </div>
-
-        </div>
-
-      </section>
-      
+                <div class="demo-gallery">
+                    <ul id="lightgallery" class="list-unstyled row">
+                        <li class="col-xs-6 col-sm-4 col-md-3"  
+                            data-src="img/1-1600.jpg" 
+                            data-sub-html="<h4>第一張照片</h4><p>Welcom my 電子相簿</p>" >
+                            <a href="">
+                              <img class="img-responsive" src="img/1-1600.jpg" alt="Thumb-1">
+                            </a>
+                        </li>
+                        <li class="col-xs-6 col-sm-4 col-md-3" data-src="img/2-1600.jpg" data-sub-html="<h4>午後時光</h4><p>ㄅㄅ</p>" data-pinterest-text="Pin it1" data-tweet-text="share on twitter 1">
+                            <a href="">
+                                <img class="img-responsive" src="img/2-1600.jpg" alt="Thumb-2">
+                            </a>
+                        </li>
+                        <li class="col-xs-6 col-sm-4 col-md-3"  data-src="img/13-1600.jpg" data-sub-html="<h4>Bowness Bay</h4><p>日落時光</p>" data-pinterest-text="Pin it1" data-tweet-text="share on twitter 1">
+                            <a href="">
+                                <img class="img-responsive" src="img/13-1600.jpg" alt="Thumb-3">
+                            </a>
+                        </li>
+                        <li class="col-xs-6 col-sm-4 col-md-3"  data-src="img/4-1600.jpg" data-sub-html="<h4>睡覺</h4><p>我滴故鄉在遠方 不要問我從哪裡來</p>" data-pinterest-text="Pin it1" data-tweet-text="share on twitter 1">
+                            <a href="">
+                                <img class="img-responsive" src="img/4-1600.jpg" alt="Thumb-4">
+                            </a>
+                        </li>
+                        <li class="col-xs-6 col-sm-4 col-md-3" data-src="img/ww.jpg" data-sub-html="<h4>死翼</h4><p>YA</p>" data-pinterest-text="Pin it1" data-tweet-text="share on twitter 1">
+                            <a href="">
+                                <img class="img-responsive" src="img/ww.jpg" alt="Thumb-5">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <script src="https://cdn.jsdelivr.net/picturefill/2.3.1/picturefill.min.js"></script>
+                <script src="https://cdn.rawgit.com/sachinchoolur/lightgallery.js/master/dist/js/lightgallery.js"></script>
+                <script src="https://cdn.rawgit.com/sachinchoolur/lg-pager.js/master/dist/lg-pager.js"></script>
+                <script src="https://cdn.rawgit.com/sachinchoolur/lg-autoplay.js/master/dist/lg-autoplay.js"></script>
+                <script src="https://cdn.rawgit.com/sachinchoolur/lg-fullscreen.js/master/dist/lg-fullscreen.js"></script>
+                <script src="https://cdn.rawgit.com/sachinchoolur/lg-zoom.js/master/dist/lg-zoom.js"></script>
+                <script src="https://cdn.rawgit.com/sachinchoolur/lg-hash.js/master/dist/lg-hash.js"></script>
+                <script src="https://cdn.rawgit.com/sachinchoolur/lg-share.js/master/dist/lg-share.js"></script>
+                <script>
+                   lightGallery(document.getElementById('lightgallery'));
+                </script>
+    
     </div>
 
     <!-- Bootstrap core JavaScript -->
